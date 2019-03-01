@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.catflap {
+    display: block;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    z-index: 1120;
+    position: relative;
+    left: 135px;
+    top: 10px;
+    width: 204px;
+    height:500px;
+    background-color: #ccf;
+    border-radius: 2px;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-perspective: 400px;
+    perspective: 400px;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-name: catflap_swing;
+    animation-name: catflap_swing;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease
+}
+
+@-webkit-keyframes catflap_swing {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0
+    }
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+        transform: perspective(400px) rotateX(-10deg)
+    }
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+        transform: perspective(400px) rotateX(10deg)
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1
+    }
+}
+
+@keyframes catflap_swing {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0
+    }
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+        transform: perspective(400px) rotateX(-10deg)
+    }
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+        transform: perspective(400px) rotateX(10deg)
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1
+    }
+}
+</style>
+</head>
+<body>
+
+
+<div class="catflap"></div>
+
+</body>
+</html>
